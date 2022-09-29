@@ -1,0 +1,13 @@
+{
+    "name": "Artical",
+    "alias": "artical",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Artical\\Providers\\ArticalServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}
