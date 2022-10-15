@@ -13,6 +13,7 @@
 
 
 use Illuminate\Support\Facades\Route;
+
 use Modules\Admin\Http\Controllers\RoleController;
 use Modules\Admin\Http\Controllers\TestController;
 
@@ -23,6 +24,7 @@ Route::prefix('admin')->middleware('auth:admins')->group(function() {
     Route::post('/role/permission/{role}','RoleController@permissionStore');
     //分配角色
     Route::post('/roleAssign/{admin}','AdminController@roleAssign');
+   
     
 });
 

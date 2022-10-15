@@ -19,6 +19,7 @@
        
     </head>
     <body class="font-sans antialiased">
+        <div id="app">
         <x-jet-banner />
 
         <div class="min-h-screen bg-gray-100">
@@ -42,5 +43,6 @@
         @stack('modals')
 
         @livewireScripts
+    </div>
     </body>
 </html>

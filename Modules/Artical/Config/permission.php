@@ -15,7 +15,7 @@ return [
             ['title' => '网站配置1', 'name' => 'Admin1::config-site', 'guard' => 'admins'],
             ['title' => '微信配置1', 'name' => 'Admin1::config-wechat', 'guard' => 'admins'],
             ['title' => '邮件配置1', 'name' => 'Admin1::config-email', 'guard' => 'admins'],
-            ['title' => '权限管理1', 'name' => 'Admin1::role-manager', 'guard' => 'admins'],
+       
         ],
     ],
 ];

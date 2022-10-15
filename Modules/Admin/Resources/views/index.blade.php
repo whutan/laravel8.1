@@ -67,7 +67,10 @@
                                         data-target="#RoleAssign{{ $user->id }}">分配角色</button>
                                     {{--  <a href="/admin/roleAssign/{{ $user->id }}" class="btn btn-secondary"
                                         type="button">分配角色</a>  --}}
-                                    <button class="btn btn-secondary" type="button">删除</button>
+                                    <button class="btn btn-secondary" type="button" onclick="del({{$user->id}},this)">删除</button>
+                                    <form action="/admin/role/{role}" method="post">
+
+                                    </form>
                                 </div>
                                 <x-modal title='分配角色' id="RoleAssign{{ $user->id }}"
                                     url="/admin/roleAssign/{{ $user->id }}" >
@@ -103,4 +106,11 @@
 </div>
 
    
+@endsection
+@section('js')
+<script>
+    function del(id,btn){
+        console.log(btn)
+    }
+</script>
 @endsection

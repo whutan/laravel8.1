@@ -42,8 +42,10 @@ class studyCommand extends Command
     public function handle()
     {
        Permission::truncate();
+       
         app()->make(\Spatie\Permission\PermissionRegistrar::class)->forgetCachedPermissions();
         foreach(Module::getOrdered() as $module){
+           
         $config = $this->getModuleConfig($module.'.permission');
        foreach($config as $group){
         foreach($group['permissions'] as $permission){

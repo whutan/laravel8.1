@@ -84,9 +84,11 @@ class RoleController extends Controller
      * @param int $id
      * @return Renderable
      */
-    public function destroy($id)
+    public function destroy(Role $role)
     {
-        //
+        $role->delete();
+        session()->flash('success','删除成功');
+        return redirect('/admin/role');
     }
 
     public function permission(Role $role)
@@ -94,6 +96,7 @@ class RoleController extends Controller
         
     // dd($role->attributesToArray());
        $modules=app()->make(AdminController::class)->getAllPermissions();
+      
         return view('admin::role.permission',compact('role','modules'));
     }
 

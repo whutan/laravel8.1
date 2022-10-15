@@ -8,6 +8,7 @@ use App\Traits\GetModuleConfig;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
+use Nwidart\Modules\Facades\Module;
 use Spatie\Permission\Models\Role;
 
 class AdminController extends Controller
@@ -19,6 +20,11 @@ class AdminController extends Controller
      */
     public function index()
     {
+        foreach(Module::getOrdered() as $module){
+            $config = $this->getModuleConfig($module.'.permission');
+           
+        };
+       
         $menus=$this->getMenus();
         $users=Admin::paginate(5);
         $roles=Role::all();
@@ -82,7 +88,7 @@ class AdminController extends Controller
      */
     public function destroy($id)
     {
-        //
+        return $id;
     }
     public function roleAssign(Request $request, Admin $admin){
        

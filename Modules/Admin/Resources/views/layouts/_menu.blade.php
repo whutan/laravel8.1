@@ -12,8 +12,11 @@
                         <li class="parent"><a href="#"><i class="{{$group['icon']}} mr-2"></i><span>{{$group['title']}}</span></a>
                             <ul class="sub-menu">
                                 @foreach ($group['menus'] as $menu)
-                                <li><a href="{{$menu['url']}}">{{$menu['title']}}</a>
-                                </li>
+                                @can($menu['permission'])
+                                   <li><a href="{{$menu['url']}}">{{$menu['title']}}</a>
+                                </li>  
+                                @endcan
+                               
                                 @endforeach  
                             </ul>
                         </li>

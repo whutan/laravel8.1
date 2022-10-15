@@ -16,9 +16,11 @@
     <link rel="stylesheet" type="text/css" href="/theme/beagle/lib/select2/css/select2.min.css"/>
     <link rel="stylesheet" type="text/css" href="/theme/beagle/lib/bootstrap-slider/css/bootstrap-slider.min.css"/>
     
+    <meta name='csrf-token' content= "{{csrf_token()}}">
+
     <link rel="stylesheet" href="/font-awesome/css/font-awesome.css">
     <!-- 引入webupload -->
-    <link rel="stylesheet" type="text/css" href="/static/webuploader-0.1.5/webuploader.css">
+    {{--  <link rel="stylesheet" type="text/css" href="/static/webuploader-0.1.5/webuploader.css">  --}}
     <link rel="stylesheet" href="/theme/beagle/css/app.css" type="text/css"/>
     @yield('css')
 </head>
@@ -330,18 +332,22 @@
 <script src="/theme/beagle/lib/perfect-scrollbar/js/perfect-scrollbar.min.js" type="text/javascript"></script>
 <script src="/theme/beagle/lib/bootstrap/dist/js/bootstrap.bundle.min.js" type="text/javascript"></script>
 <script src="/theme/beagle/js/app.js" type="text/javascript"></script>
-<script src="/theme/beagle/lib/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
+  <script src="/theme/beagle/lib/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
 <script src="/theme/beagle/lib/jquery.nestable/jquery.nestable.js" type="text/javascript"></script>
 <script src="/theme/beagle/lib/moment.js/min/moment.min.js" type="text/javascript"></script>
 <script src="/theme/beagle/lib/datetimepicker/js/bootstrap-datetimepicker.min.js" type="text/javascript"></script>
 <script src="/theme/beagle/lib/select2/js/select2.min.js" type="text/javascript"></script>
 <script src="/theme/beagle/lib/select2/js/select2.full.min.js" type="text/javascript"></script>
 <script src="/theme/beagle/lib/bootstrap-slider/bootstrap-slider.min.js" type="text/javascript"></script> 
-<script src="/theme/beagle/lib/bs-custom-file-input/bs-custom-file-input.js" type="text/javascript"></script>
+<script src="/theme/beagle/lib/bs-custom-file-input/bs-custom-file-input.js" type="text/javascript"></script>  
 <!-- 引入webuploader.js -->
-<script src="/static/webuploader-0.1.5/webuploader.js"></script>
+{{--  <script src="/static/webuploader-0.1.5/webuploader.js"></script>  --}}
 {{--layui--}}
-<script src="/js/layui/dist/layui.js"></script>
+{{--  <script src="/js/layui/dist/layui.js"></script>  --}}
+
+
+
+<script src="{{asset('/plugin/a.js')}}"></script>
 <script type="text/javascript">
     $(document).ready(function(){
         //-initialize the javascript
